@@ -7,18 +7,9 @@ import { UpdateRecipeDto } from './types/update-recipe.dto';
 export class RecipesController {
   constructor(private readonly service: RecipesService) {}
 
-  @Get()
-  list() { return this.service.list(); }
-
-  @Get(':id')
-  get(@Param('id', ParseIntPipe) id: number) { return this.service.get(id); }
-
-  @Post()
-  create(@Body() dto: CreateRecipeDto) { return this.service.create(dto); }
-
-  @Patch(':id')
-  update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateRecipeDto) { return this.service.update(id, dto); }
-
-  @Delete(':id')
-  remove(@Param('id', ParseIntPipe) id: number) { return this.service.remove(id); }
+  @Get() list() { return this.service.list(); }
+  @Get(':id') get(@Param('id', ParseIntPipe) id: number) { return this.service.get(id); }
+  @Post() create(@Body() dto: CreateRecipeDto) { return this.service.create(dto); }
+  @Patch(':id') update(@Param('id', ParseIntPipe) id: number, @Body() dto: UpdateRecipeDto) { return this.service.update(id, dto); }
+  @Delete(':id') remove(@Param('id', ParseIntPipe) id: number) { return this.service.remove(id); }
 }

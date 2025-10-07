@@ -1,31 +1,16 @@
-# TastyBoard API — Revisão Completa (NestJS + Prisma + PostgreSQL)
+# TastyBoard API — NestJS + Prisma + PostgreSQL (com Swagger e Vercel)
 
-Correções aplicadas para evitar erros de módulos, tipagem e mapeamento de banco.
+## Local
+1) `.env` baseado em `.env.example`
+2) `npm install`
+3) `npm run prisma:generate`
+4) `npm run prisma:migrate`
+5) `npm run db:seed` (opcional)
+6) `npm run dev` → http://localhost:3001  (Swagger: /docs)
 
-## ✅ O que foi revisado
-- `package.json` com **todas as dependências** necessárias (Nest/TS/Prisma).
-- `tsconfig.json` e `tsconfig.build.json` ajustados (decorators/metadata).
-- `PrismaModule` global para **injeção do PrismaService** sem duplicar providers.
-- `PrismaService` usa **process.on('beforeExit')** (evita erro TS de tipo).
-- DTOs com `@nestjs/mapped-types` e validações com `class-validator`.
-- `schema.prisma` com **snake_case** (tabelas/colunas via `@map`/`@@map`).
+## Deploy na Vercel (Docker)
+- Adicione `DATABASE_URL` nas Environment Variables (Production/Preview)
+- A Vercel usa o `Dockerfile` deste projeto.
+- Migrações rodam automaticamente via `prisma migrate deploy` no `entrypoint.sh`.
 
-## 🚀 Como rodar
-```bash
-docker compose up -d
-npm install
-npm run prisma:generate
-npm run prisma:migrate
-npm run db:seed
-npm run dev
-# http://localhost:3001
-```
-
-## 🔗 Endpoints
-- GET /users
-- GET /categories
-- GET /recipes
-- GET /recipes/:id
-- POST /recipes
-- PATCH /recipes/:id
-- DELETE /recipes/:id
+Sugestão de banco gerenciado: Neon, Railway, Supabase ou Render.

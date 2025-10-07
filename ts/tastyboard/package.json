@@ -1,12 +1,11 @@
 {
-  "name": "tastyboard-next-ts",
-  "version": "0.1.0",
+  "name": "tastyboard-front",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -14,11 +13,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.0",
-    "@types/node": "^20.11.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.5"
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.4.5"
   }
 }

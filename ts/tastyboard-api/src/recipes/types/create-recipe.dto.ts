@@ -1,25 +1,13 @@
-import { IsArray, IsNotEmpty, IsOptional, IsString, IsUrl } from 'class-validator';
+import { IsArray, IsInt, IsNotEmpty, IsOptional, IsString, IsUrl, Min } from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class CreateRecipeDto {
-  @IsString()
-  @IsNotEmpty()
-  title!: string;
-
-  @IsString()
-  @IsNotEmpty()
-  description!: string;
-
-  @IsOptional()
-  @IsUrl({}, { message: 'imageUrl must be a valid URL' })
-  imageUrl?: string;
-
-  @IsOptional()
-  @IsUrl({}, { message: 'videoUrl must be a valid URL' })
-  videoUrl?: string;
-
-  @IsArray()
-  ingredients!: string[];
-
-  @IsArray()
-  steps!: string[];
+  @ApiProperty() @IsString() @IsNotEmpty() title!: string;
+  @ApiProperty() @IsString() @IsNotEmpty() description!: string;
+  @ApiPropertyOptional() @IsOptional() @IsUrl() imageUrl?: string;
+  @ApiPropertyOptional() @IsOptional() @IsUrl() videoUrl?: string;
+  @ApiProperty({ type: [String] }) @IsArray() ingredients!: string[];
+  @ApiProperty({ type: [String] }) @IsArray() steps!: string[];
+  @ApiPropertyOptional() @IsOptional() @IsInt() @Min(1) authorId?: number;
+  @ApiPropertyOptional() @IsOptional() @IsInt() @Min(1) categoryId?: number;
 }

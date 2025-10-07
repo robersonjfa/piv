@@ -1,15 +1,24 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import './globals.css';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: "TastyBoard • Next.js + TypeScript",
-  description: "Receitas com busca e layout responsivo (demo).",
+export const metadata = {
+  title: 'TastyBoard',
+  description: 'Recipes app',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <body>{children}</body>
+    <html lang="pt-br">
+      <body>
+        <header className="site">
+          <a href="/"><strong>TastyBoard</strong></a>
+          <nav>
+            <a href="/recipes">Receitas</a>
+            <a href="/recipes/new">Nova receita</a>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

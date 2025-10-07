@@ -17,6 +17,22 @@ let CategoriesService = class CategoriesService {
         this.prisma = prisma;
     }
     list() { return this.prisma.category.findMany({ orderBy: { name: 'asc' } }); }
+    async get(id) {
+        const category = await this.prisma.category.findUnique({ where: { id } });
+        if (!category)
+            throw new common_1.NotFoundException('Category not found');
+        return category;
+    }
+    create(data) { return this.prisma.category.create({ data }); }
+    async update(id, data) {
+        await this.get(id);
+        return this.prisma.category.update({ where: { id }, data });
+    }
+    async remove(id) {
+        await this.get(id);
+        await this.prisma.category.delete({ where: { id } });
+        return { ok: true };
+    }
 };
 exports.CategoriesService = CategoriesService;
 exports.CategoriesService = CategoriesService = __decorate([

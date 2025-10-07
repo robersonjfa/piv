@@ -17,6 +17,22 @@ let UsersService = class UsersService {
         this.prisma = prisma;
     }
     list() { return this.prisma.user.findMany({ orderBy: { createdAt: 'desc' } }); }
+    async get(id) {
+        const user = await this.prisma.user.findUnique({ where: { id } });
+        if (!user)
+            throw new common_1.NotFoundException('User not found');
+        return user;
+    }
+    create(data) { return this.prisma.user.create({ data }); }
+    async update(id, data) {
+        await this.get(id);
+        return this.prisma.user.update({ where: { id }, data });
+    }
+    async remove(id) {
+        await this.get(id);
+        await this.prisma.user.delete({ where: { id } });
+        return { ok: true };
+    }
 };
 exports.UsersService = UsersService;
 exports.UsersService = UsersService = __decorate([

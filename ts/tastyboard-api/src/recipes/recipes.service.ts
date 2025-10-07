@@ -7,9 +7,7 @@ import { UpdateRecipeDto } from './types/update-recipe.dto';
 export class RecipesService {
   constructor(private prisma: PrismaService) {}
 
-  list() {
-    return this.prisma.recipe.findMany({ orderBy: { createdAt: 'desc' } });
-  }
+  list() { return this.prisma.recipe.findMany({ orderBy: { createdAt: 'desc' } }); }
 
   async get(id: number) {
     const recipe = await this.prisma.recipe.findUnique({ where: { id } });
@@ -17,9 +15,7 @@ export class RecipesService {
     return recipe;
   }
 
-  create(data: CreateRecipeDto) {
-    return this.prisma.recipe.create({ data });
-  }
+  create(data: CreateRecipeDto) { return this.prisma.recipe.create({ data }); }
 
   async update(id: number, data: UpdateRecipeDto) {
     await this.get(id);

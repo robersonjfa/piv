@@ -16,18 +16,14 @@ let RecipesService = class RecipesService {
     constructor(prisma) {
         this.prisma = prisma;
     }
-    list() {
-        return this.prisma.recipe.findMany({ orderBy: { createdAt: 'desc' } });
-    }
+    list() { return this.prisma.recipe.findMany({ orderBy: { createdAt: 'desc' } }); }
     async get(id) {
         const recipe = await this.prisma.recipe.findUnique({ where: { id } });
         if (!recipe)
             throw new common_1.NotFoundException('Recipe not found');
         return recipe;
     }
-    create(data) {
-        return this.prisma.recipe.create({ data });
-    }
+    create(data) { return this.prisma.recipe.create({ data }); }
     async update(id, data) {
         await this.get(id);
         return this.prisma.recipe.update({ where: { id }, data });

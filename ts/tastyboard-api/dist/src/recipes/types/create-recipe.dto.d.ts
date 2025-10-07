@@ -5,4 +5,6 @@ export declare class CreateRecipeDto {
     videoUrl?: string;
     ingredients: string[];
     steps: string[];
+    authorId?: number;
+    categoryId?: number;
 }

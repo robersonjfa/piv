@@ -11,9 +11,9 @@ export declare class RecipesController {
         videoUrl: string | null;
         ingredients: import("@prisma/client/runtime/library").JsonValue;
         steps: import("@prisma/client/runtime/library").JsonValue;
-        id: number;
         authorId: number | null;
         categoryId: number | null;
+        id: number;
         createdAt: Date;
         updatedAt: Date;
     }[]>;
@@ -24,9 +24,9 @@ export declare class RecipesController {
         videoUrl: string | null;
         ingredients: import("@prisma/client/runtime/library").JsonValue;
         steps: import("@prisma/client/runtime/library").JsonValue;
-        id: number;
         authorId: number | null;
         categoryId: number | null;
+        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -37,9 +37,9 @@ export declare class RecipesController {
         videoUrl: string | null;
         ingredients: import("@prisma/client/runtime/library").JsonValue;
         steps: import("@prisma/client/runtime/library").JsonValue;
-        id: number;
         authorId: number | null;
         categoryId: number | null;
+        id: number;
         createdAt: Date;
         updatedAt: Date;
     }, never, import("@prisma/client/runtime/library").DefaultArgs>;
@@ -50,9 +50,9 @@ export declare class RecipesController {
         videoUrl: string | null;
         ingredients: import("@prisma/client/runtime/library").JsonValue;
         steps: import("@prisma/client/runtime/library").JsonValue;
-        id: number;
         authorId: number | null;
         categoryId: number | null;
+        id: number;
         createdAt: Date;
         updatedAt: Date;
     }>;
