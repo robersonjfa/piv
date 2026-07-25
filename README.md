@@ -2,6 +2,11 @@
 
 Material de apoio da disciplina **Programação IV**: progressão de HTML/CSS → JavaScript → TypeScript → app full stack (TastyBoard).
 
+**Na aula (construção ao vivo):** use o repositório separado  
+➡️ https://github.com/robersonjfa/piv-aula  
+
+Este repo (`piv`) é o **gabarito / referência** (com comentários e GitHub Pages).
+
 ## Estrutura
 
 ```text
