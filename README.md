@@ -1,141 +1,112 @@
-# PIV - Projetos de Desenvolvimento Web
+# PIV — Programação IV (UNOESC)
 
-Este repositório contém uma coleção de projetos e exercícios práticos focados no desenvolvimento web, abrangendo HTML, CSS, JavaScript e TypeScript. Os projetos estão organizados por tecnologia e nível de complexidade.
+Material de apoio da disciplina **Programação IV**: progressão de HTML/CSS → JavaScript → TypeScript → app full stack (TastyBoard).
 
-## 📁 Estrutura do Repositório
+## Estrutura
 
-```
+```text
 piv/
-├── html/                    # Projetos em HTML/CSS
-├── js/                      # Projetos em JavaScript
-├── ts/                      # Projetos em TypeScript
-└── README.md               # Este arquivo
+├── 01-html/                 # Fundamentos HTML/CSS
+├── 02-js/                   # JavaScript no navegador
+├── 03-ts-migracao/          # Exercício JS → TypeScript (aluno / professor)
+├── 04-tarefas-dia/          # App Vite + TypeScript
+├── 05-tastyboard/           # Projeto TastyBoard (JS puro + Next.js)
+│   ├── js/                  # Front em JavaScript
+│   └── web/                 # Front em Next.js + TypeScript
+├── apps/
+│   └── tastyboard-api/      # API NestJS + Prisma + PostgreSQL
+├── docs/                    # Guias (Node.js, migração JS→TS)
+└── README.md
 ```
 
-## 🌐 Projetos HTML/CSS
+## Trilha sugerida
 
-### 📂 `html/aula01/`
-Exercícios básicos de HTML e CSS para iniciantes.
-- **Arquivos**: `index.html`, `style.css`, `exemplo01.html`
-- **Objetivo**: Fundamentos de estruturação HTML e estilização CSS
+| Etapa | Pasta | Objetivo |
+|------:|-------|----------|
+| 1 | `01-html/` | Estrutura, CSS e HTML semântico |
+| 2 | `02-js/` | Interatividade e DOM |
+| 3 | `03-ts-migracao/` | Migrar JS para TypeScript |
+| 4 | `04-tarefas-dia/` | Projeto Vite + TS |
+| 5 | `05-tastyboard/js` → `web` | Evoluir front; consumir API |
+| 6 | `apps/tastyboard-api` | Backend, banco e CRUD |
 
-### 📂 `html/exemplo01/`
-Projeto exemplo com estrutura organizada.
-- **Estrutura**: HTML, CSS e JS separados em pastas
-- **Objetivo**: Demonstrar organização de arquivos em projetos web
+## Projetos
 
-### 📂 `html/meu-curriculo/`
-Currículo pessoal básico em HTML.
-- **Arquivos**: `index.html`, `style.css`, pasta `media/`
-- **Objetivo**: Criar um currículo simples com HTML semântico
+### `01-html/`
+- `aula01/` — primeiros exercícios HTML/CSS
+- `exemplo01/` — HTML + CSS + JS em pastas
+- `meu-curriculo/` — currículo básico
+- `meu-curriculo-semantico/` — HTML5 semântico
 
-### 📂 `html/meu-curriculo-semantico/`
-Versão aprimorada do currículo usando HTML5 semântico.
-- **Arquivos**: `index.html`, `style.css`
-- **Tecnologias**: HTML5 semântico, CSS3
-- **Objetivo**: Demonstrar uso correto de tags semânticas (`header`, `main`, `section`, `article`, `footer`)
+### `02-js/`
+- `meu-curriculo-javascript/` — currículo com interatividade
 
-## 🚀 Projetos JavaScript
+### `03-ts-migracao/`
+- `aluno/` — ponto de partida em JavaScript
+- `professor/` — versão migrada/completa em TypeScript
 
-### 📂 `js/meu-curriculo-javascript/`
-Currículo interativo com JavaScript.
-- **Arquivos**: `index.html`, `script.js`, `style.css`
-- **Funcionalidades**: Interatividade, navegação dinâmica
-- **Objetivo**: Adicionar comportamento dinâmico ao currículo
-
-## 📘 Projetos TypeScript
-
-### 📂 `ts/tarefas-dia-ts/`
-Aplicação de gerenciamento de tarefas diárias.
-- **Tecnologias**: TypeScript, Vite, HTML5, CSS3
-- **Funcionalidades**:
-  - Adicionar/remover tarefas
-  - Marcar tarefas como concluídas
-  - Persistência com LocalStorage
-  - Organização por data
-- **Como executar**:
-  ```bash
-  cd ts/tarefas-dia-ts
-  npm install
-  npm run dev
-  ```
-
-### 📂 `ts/migracao-js-ts-aluno/`
-Projeto base para aprender migração de JavaScript para TypeScript.
-- **Objetivo**: Demonstrar o processo de migração JS → TS
-- **Conteúdo**: Versão inicial em JavaScript para ser migrada
-
-### 📂 `ts/migracao-js-ts-professor/`
-Versão completa da migração JavaScript para TypeScript.
-- **Tecnologias**: TypeScript, Node.js
-- **Funcionalidades**: Projeto compilado e configurado com TypeScript
-- **Como executar**:
-  ```bash
-  cd ts/migracao-js-ts-professor
-  npm install
-  npm run build
-  ```
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estruturação semântica de páginas
-- **CSS3**: Estilização e layout responsivo
-- **JavaScript**: Interatividade e comportamento dinâmico
-- **TypeScript**: Tipagem estática e desenvolvimento escalável
-- **Vite**: Build tool e servidor de desenvolvimento
-- **Node.js**: Ambiente de execução JavaScript
-
-## 🚀 Como Executar os Projetos
-
-### Projetos HTML/CSS/JS Puros
 ```bash
-# Navegue até a pasta do projeto
-cd html/nome-do-projeto
+cd 03-ts-migracao/professor
+npm install
+npm run build
+```
 
-# Abra o index.html no navegador ou use um servidor local
-npx serve .
+### `04-tarefas-dia/tarefas-dia`
+App de tarefas com Vite + TypeScript + LocalStorage.
+
+```bash
+cd 04-tarefas-dia/tarefas-dia
+npm install
+npm run dev
+```
+
+### `05-tastyboard/`
+- `js/` — versão front em JavaScript
+- `web/` — versão Next.js + TypeScript
+
+```bash
+cd 05-tastyboard/web
+cp .env.local.example .env.local   # se necessário
+npm install
+npm run dev
+```
+
+### `apps/tastyboard-api`
+API NestJS + Prisma.
+
+```bash
+cd apps/tastyboard-api
+cp .env.example .env
+# ajuste DATABASE_URL, suba o Postgres (docker compose) e rode:
+npm install
+npx prisma migrate dev
+npm run start:dev
+```
+
+## Documentação (`docs/`)
+
+- `Guia_Instalacao_NodeJS.docx` — instalação Node.js (2026)
+- `Migracao_JS_TS_Completo.docx` — tutorial de migração JS → TS (2026)
+
+## Como rodar projetos estáticos (HTML/CSS/JS)
+
+```bash
+cd 01-html/meu-curriculo-semantico
+npx --yes serve .
 # ou
 python3 -m http.server 8080
 ```
 
-### Projetos TypeScript
-```bash
-# Navegue até a pasta do projeto
-cd ts/nome-do-projeto
+## Requisitos
 
-# Instale as dependências
-npm install
+- Node.js **24 LTS** (recomendado) — ver `docs/Guia_Instalacao_NodeJS.docx`
+- npm / npx
+- Para a API: Docker (PostgreSQL) ou instância local compatível
 
-# Execute o servidor de desenvolvimento
-npm run dev
+## Segurança
 
-# Para build de produção
-npm run build
-```
+Arquivos `.env` **não** devem ser commitados. Use sempre `.env.example` / `.env.local.example`.
 
-## 📚 Objetivos de Aprendizado
+## Licença
 
-Este repositório foi criado para demonstrar:
-
-1. **Progressão de Aprendizado**: Do HTML básico ao TypeScript avançado
-2. **Boas Práticas**: Organização de código, estrutura de projetos
-3. **HTML Semântico**: Uso correto de tags HTML5
-4. **JavaScript Moderno**: ES6+, manipulação do DOM, LocalStorage
-5. **TypeScript**: Tipagem, interfaces, compilação
-6. **Ferramentas Modernas**: Vite, npm, build tools
-
-## 🤝 Contribuição
-
-Este é um repositório educacional. Sinta-se à vontade para:
-- Fazer fork do projeto
-- Sugerir melhorias
-- Reportar issues
-- Adicionar novos exemplos
-
-## 📄 Licença
-
-Este projeto é de uso educacional e está disponível sob licença MIT.
-
----
-
-**Desenvolvido para fins educacionais** 📖✨
+Uso educacional (MIT).
