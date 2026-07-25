@@ -1,19 +1,31 @@
+<!--
+  Aula 01 — Página hands-on com HTML + CSS
+  Abra este arquivo no navegador e observe como o style.css altera a aparência.
+-->
 <!DOCTYPE html>
+<!-- lang ajuda leitores de tela e mecanismos de busca a saber o idioma da página -->
 <html lang="pt-BR">
 <head>
+  <!-- charset: define a codificação dos caracteres (acentos, ç, etc.) -->
   <meta charset="UTF-8">
+  <!-- title: texto exibido na aba do navegador -->
   <title>Página Hands-on HTML e CSS</title>
+  <!-- link: importa a folha de estilos externa (caminho relativo ao HTML) -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- container: agrupa o conteúdo para o CSS centralizar e limitar a largura -->
   <div class="container">
 
+    <!-- h1: título principal da página (use só um por página, em geral) -->
     <h1>Minha Primeira Página Web</h1>
 
+    <!-- p: parágrafo de texto -->
     <p>Essa é uma página criada durante um exercício prático com HTML e CSS.</p>
 
     <h2>Lista de Tópicos Estudados</h2>
+    <!-- ul = lista não ordenada; li = cada item da lista -->
     <ul>
       <li>HTML Básico</li>
       <li>CSS para Estilização</li>
@@ -21,15 +33,26 @@
     </ul>
 
     <h2>Imagem Exemplo</h2>
+    <!--
+      img: imagem embutida.
+      src = caminho do arquivo; alt = texto alternativo (acessibilidade / se a imagem falhar).
+      Exercício: preencha src com uma imagem, ex.: "foto.jpg"
+    -->
     <img src="" alt="Imagem de exemplo">
 
     <h2>Vídeo Incorporado</h2>
+    <!-- video + source: mídia HTML5; controls mostra play/pause/volume -->
     <video width="400" controls>
       <source src="" type="video/mp4">
+      <!-- Texto exibido só se o navegador não suportar <video> -->
       Seu navegador não suporta vídeo HTML5.
     </video>
 
     <h2>Link Útil</h2>
+    <!--
+      a: hiperlink.
+      href = destino; target="_blank" abre em nova aba.
+    -->
     <p>Visite o <a href="https://developer.mozilla.org/pt-BR/docs/Web" target="_blank">MDN Web Docs</a> para aprender mais sobre HTML e CSS.</p>
 
   </div>

@@ -1,38 +1,46 @@
-/* Estilo global */
+/*
+  Aula 01 — style.css
+  Folha de estilos da página index.html.
+  Lembrete: seletores apontam para elementos/tags/classes do HTML.
+*/
+
+/* ---------- Estilo global da página ---------- */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  margin: 0;
+  font-family: Arial, sans-serif; /* tipografia padrão */
+  background-color: #f5f5f5;      /* cor de fundo da página */
+  color: #333;                    /* cor do texto */
+  margin: 0;                      /* remove margem padrão do navegador */
   padding: 0;
 }
 
-/* Container central */
+/* ---------- Caixa central do conteúdo ---------- */
+/* .container = seletor de CLASSE (no HTML: class="container") */
 .container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 800px;               /* largura máxima do conteúdo */
+  margin: 40px auto;              /* centraliza horizontalmente */
+  padding: 20px;                  /* espaço interno */
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;             /* cantos arredondados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra suave */
 }
 
-/* Títulos */
+/* ---------- Títulos ---------- */
+/* vírgula = aplica o mesmo estilo a h1 E h2 */
 h1, h2 {
   color: #0066cc;
   text-align: center;
 }
 
-/* Imagem */
+/* ---------- Imagens ---------- */
 img {
-  display: block;
-  margin: 10px auto;
+  display: block;                 /* permite margin auto funcionar */
+  margin: 10px auto;              /* centraliza a imagem */
   width: 100%;
-  max-width: 400px;
+  max-width: 400px;               /* não passa de 400px */
   border-radius: 10px;
 }
 
-/* Vídeo */
+/* ---------- Vídeo ---------- */
 video {
   display: block;
   margin: 20px auto;
@@ -40,12 +48,13 @@ video {
   border-radius: 8px;
 }
 
-/* Links */
+/* ---------- Links ---------- */
 a {
   color: #0066cc;
-  text-decoration: none;
+  text-decoration: none;          /* remove sublinhado padrão */
 }
 
+/* :hover = estado ao passar o mouse */
 a:hover {
   text-decoration: underline;
 }

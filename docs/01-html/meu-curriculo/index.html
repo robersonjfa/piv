@@ -1,14 +1,31 @@
+<!--
+  Meu currículo — versão básica (HTML quase sem CSS)
+  Compare depois com meu-curriculo-semantico/ (HTML5 semântico + CSS).
+-->
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Meu Currículo</title>
-    </head>
-    <!-- Criando uma página pessoal para meu currículo -->
-    <body>
-        <h1>Roberson Alves</h1>
-        <p>
-            <h3>Meu Currículo</h3>
-            <marquee>Meu Currículo</marquee>
-        </p>
-    </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Currículo</title>
+  <!-- Se criar estilos, descomente a linha abaixo:
+  <link rel="stylesheet" href="style.css">
+  -->
+</head>
+<!-- Comentário HTML: não aparece na página, só no código-fonte -->
+<body>
+  <!-- Nome em destaque -->
+  <h1>Roberson Alves</h1>
+
+  <!--
+    Observação didática:
+    Colocar <h3> e <marquee> dentro de <p> não é HTML válido.
+    O navegador “corrige”, mas o ideal é usar tags no lugar certo.
+    Veja a versão semântica para a estrutura recomendada.
+  -->
+  <p>
+    <h3>Meu Currículo</h3>
+    <!-- marquee: efeito de texto rolante (obsoleto; evite em projetos novos) -->
+    <marquee>Meu Currículo</marquee>
+  </p>
+</body>
 </html>

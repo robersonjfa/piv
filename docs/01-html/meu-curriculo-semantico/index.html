@@ -1,63 +1,69 @@
 <!--
-Arquivo: index.html
-Descrição: Página HTML semântica representando um mini currículo pessoal.
-Objetivo: Ensinar uso de HTML5 com tags semânticas (header, main, section, article, footer),
-          integrando conteúdo textual e links, e mantendo uma estrutura clara.
-Tecnologias: HTML5 + CSS3 (arquivo style.css vinculado)
-Observações: Este exemplo pode ser aberto diretamente no navegador ou hospedado
-             em um servidor web (GitHub Pages, Netlify ou Vercel).
+  Arquivo: index.html
+  Descrição: Mini currículo com HTML5 semântico.
+  Objetivo: usar header, main, section, article, footer e address.
+  CSS: style.css (vinculado no <head>)
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Currículo - João Silva</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <!-- viewport: adaptação a telas móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Currículo - João Silva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- header: topo / identidade da página (não é só “bonito”: tem significado) -->
 <header>
-    <h1>João Silva</h1>
-    <p>Desenvolvedor Web | Front-End e Back-End</p>
+  <h1>João Silva</h1>
+  <p>Desenvolvedor Web | Front-End e Back-End</p>
 </header>
 
+<!-- main: conteúdo principal da página -->
 <main>
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Sou um desenvolvedor web apaixonado por criar soluções eficientes e criativas, com experiência em HTML, CSS, JavaScript e TypeScript.</p>
-    </section>
+  <!-- section: bloco temático (Sobre, Experiência, etc.) -->
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Sou um desenvolvedor web apaixonado por criar soluções eficientes e criativas, com experiência em HTML, CSS, JavaScript e TypeScript.</p>
+  </section>
 
-    <section>
-        <h2>Experiência</h2>
-        <article>
-            <h3>Desenvolvedor Front-End</h3>
-            <p><strong>Empresa ABC</strong> | 2022 - Atual</p>
-            <p>Criação de interfaces responsivas e interativas usando React e TypeScript.</p>
-        </article>
-        <article>
-            <h3>Estagiário em Desenvolvimento</h3>
-            <p><strong>Empresa XYZ</strong> | 2021 - 2022</p>
-            <p>Auxílio na manutenção e desenvolvimento de sistemas internos com HTML, CSS e JavaScript.</p>
-        </article>
-    </section>
+  <section>
+    <h2>Experiência</h2>
+    <!-- article: conteúdo que faria sentido sozinho (ex.: um emprego) -->
+    <article>
+      <h3>Desenvolvedor Front-End</h3>
+      <!-- strong: ênfase/importância semântica (não use só por negrito) -->
+      <p><strong>Empresa ABC</strong> | 2022 - Atual</p>
+      <p>Criação de interfaces responsivas e interativas usando React e TypeScript.</p>
+    </article>
+    <article>
+      <h3>Estagiário em Desenvolvimento</h3>
+      <p><strong>Empresa XYZ</strong> | 2021 - 2022</p>
+      <p>Auxílio na manutenção e desenvolvimento de sistemas internos com HTML, CSS e JavaScript.</p>
+    </article>
+  </section>
 
-    <section>
-        <h2>Educação</h2>
-        <p>Bacharelado em Ciência da Computação - Universidade ABC (2018 - 2022)</p>
-    </section>
+  <section>
+    <h2>Educação</h2>
+    <p>Bacharelado em Ciência da Computação - Universidade ABC (2018 - 2022)</p>
+  </section>
 
-    <section>
-        <h2>Contato</h2>
-        <address>
-            <p>Email: <a href="mailto:joao@email.com">joao@email.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/joao">linkedin.com/in/joao</a></p>
-        </address>
-    </section>
+  <section>
+    <h2>Contato</h2>
+    <!-- address: dados de contato / autoria -->
+    <address>
+      <!-- mailto: abre o app de e-mail do usuário -->
+      <p>Email: <a href="mailto:joao@email.com">joao@email.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/joao">linkedin.com/in/joao</a></p>
+    </address>
+  </section>
 </main>
 
+<!-- footer: rodapé (créditos, copyright, links secundários) -->
 <footer>
-    <p>&copy; 2025 João Silva</p>
+  <p>&copy; 2026 João Silva</p>
 </footer>
 
 </body>

@@ -1,13 +1,25 @@
+<!--
+  Exemplo 01 — Organização em pastas
+  index.html  → página
+  css/style.css → estilos
+  js/script.js  → comportamento
+-->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Teste</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="js/script.js"></script>
-    </head>
-    <body onload="teste()">
-        teste
-    </body>
+<html lang="pt-BR">
+<head>
+  <title>Teste</title>
+  <meta charset="UTF-8">
+  <!-- viewport: essencial para layout correto em celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Caminhos relativos às pastas css/ e js/ -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/script.js"></script>
+</head>
+<!--
+  onload: quando o body terminar de carregar, chama a função teste()
+  definida em js/script.js
+-->
+<body onload="teste()">
+  teste
+</body>
 </html>

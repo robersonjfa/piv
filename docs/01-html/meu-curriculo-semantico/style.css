@@ -1,43 +1,48 @@
 /*
-Arquivo: style.css
-Descrição: Estilização da página "Mini Currículo" usando CSS3.
-Objetivo: Aplicar estilos para melhorar a apresentação visual e a legibilidade da página.
-Tecnologias: CSS3
-Observações: Este arquivo é vinculado ao HTML através da tag <link> no <head>.
+  Arquivo: style.css
+  Página: Mini Currículo semântico
+  Os seletores abaixo batem com as tags HTML5 (header, main, section, footer).
 */
+
+/* ---------- Base ---------- */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;                 /* zera margem padrão do body */
+  padding: 0;
+  line-height: 1.6;          /* espaçamento entre linhas (legibilidade) */
 }
 
+/* ---------- Cabeçalho ---------- */
 header {
-    background-color: #0366d6;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #0366d6; /* azul de destaque */
+  color: white;
+  text-align: center;
+  padding: 20px 0;           /* espaço vertical interno */
 }
 
+/* ---------- Conteúdo principal ---------- */
 main {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  max-width: 800px;          /* coluna de leitura confortável */
+  margin: auto;              /* centraliza o main */
+  padding: 20px;
 }
 
+/* ---------- Títulos ---------- */
 h1, h2, h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+/* ---------- Seções ---------- */
 section {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd; /* separador visual entre blocos */
 }
 
+/* ---------- Rodapé ---------- */
 footer {
-    text-align: center;
-    background: #f4f4f4;
-    padding: 10px;
-    margin-top: 20px;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
 }
