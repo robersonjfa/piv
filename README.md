@@ -6,7 +6,6 @@ Material de apoio da disciplina **Programação IV**: progressão de HTML/CSS �
 
 ```text
 piv/
-├── 01-html/                 # Fundamentos HTML/CSS
 ├── 02-js/                   # JavaScript no navegador
 ├── 03-ts-migracao/          # Exercício JS → TypeScript (aluno / professor)
 ├── 04-tarefas-dia/          # App Vite + TypeScript
@@ -15,7 +14,10 @@ piv/
 │   └── web/                 # Front em Next.js + TypeScript
 ├── apps/
 │   └── tastyboard-api/      # API NestJS + Prisma + PostgreSQL
-├── docs/                    # Guias (Node.js, migração JS→TS)
+├── docs/                    # GitHub Pages + guias
+│   ├── index.html           # Página inicial (Pages)
+│   ├── 01-html/             # Fundamentos HTML/CSS
+│   └── *.docx               # Guias Node.js e migração JS→TS
 └── README.md
 ```
 
@@ -23,7 +25,7 @@ piv/
 
 | Etapa | Pasta | Objetivo |
 |------:|-------|----------|
-| 1 | `01-html/` | Estrutura, CSS e HTML semântico |
+| 1 | `docs/01-html/` | Estrutura, CSS e HTML semântico |
 | 2 | `02-js/` | Interatividade e DOM |
 | 3 | `03-ts-migracao/` | Migrar JS para TypeScript |
 | 4 | `04-tarefas-dia/` | Projeto Vite + TS |
@@ -32,11 +34,15 @@ piv/
 
 ## Projetos
 
-### `01-html/`
-- `aula01/` — primeiros exercícios HTML/CSS
-- `exemplo01/` — HTML + CSS + JS em pastas
-- `meu-curriculo/` — currículo básico
-- `meu-curriculo-semantico/` — HTML5 semântico
+### `docs/` (GitHub Pages)
+Site estático: configure **Settings → Pages → Deploy from a branch → `/docs`**.
+
+- URL: `https://robersonjfa.github.io/piv/`
+- `index.html` — índice com links dos exemplos HTML
+- `01-html/aula01/` — primeiros exercícios HTML/CSS
+- `01-html/exemplo01/` — HTML + CSS + JS em pastas
+- `01-html/meu-curriculo/` — currículo básico
+- `01-html/meu-curriculo-semantico/` — HTML5 semântico
 
 ### `02-js/`
 - `meu-curriculo-javascript/` — currículo com interatividade
@@ -91,10 +97,11 @@ npm run start:dev
 ## Como rodar projetos estáticos (HTML/CSS/JS)
 
 ```bash
-cd 01-html/meu-curriculo-semantico
+cd docs
 npx --yes serve .
 # ou
 python3 -m http.server 8080
+# abra http://localhost:8080
 ```
 
 ## Requisitos
